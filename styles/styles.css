@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.1fr 8fr;
+    height: 100vh;
+}
+
+.dashboard-container {
+    background-color: #06b6d4;
+    color: white;
+    display: grid;
+    grid-template-rows: 2fr 6fr 12fr;
+}
+
+.dashboard-logo {
+    align-self: center;
+    justify-self: center;
+}
+
+.dashboard-option-1 h3,
+.dashboard-option-2 h3 {
+    margin: 10px;
+}
+
+.dashboard-option-1,
+.dashboard-option-2 {
+    margin: 5px;
+    padding: 10px;
+}
+
+.dashboard-logo img{
+    height: 50px;
+    margin-bottom: -15px;
+    margin-right: 5px;
+}
+
+img {
+    height: 25px;
+    margin-bottom: -5px;
+    margin-right: 20px;
+}
+
+.dashboard-option-2 {
+    margin-top: 50px;
+}
+
+.main {
+    border: 1px solid red;
+}
