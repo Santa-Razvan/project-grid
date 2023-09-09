@@ -20,7 +20,7 @@ body {
     background-color: #06b6d4;
     color: white;
     display: grid;
-    grid-template-rows: 2fr 6fr 11fr;
+    grid-template-rows: .5fr 7fr;
 }
 
 .dashboard-logo {
@@ -46,6 +46,13 @@ body {
     margin-right: 5px;
 }
 
+.dashboard-options {
+    margin-top: 20px;
+    height: 500px;
+    position: sticky;
+    top: 0px;
+}
+
 img {
     height: 25px;
     margin-bottom: -5px;
@@ -58,7 +65,7 @@ img {
 
 .main {
     display: grid;
-    grid-template-rows: 1fr 3.5fr;
+    grid-template-rows: .5fr;
 }
 
 .profile-container {
@@ -66,7 +73,7 @@ img {
     display: grid;
     grid-template-rows: 1fr 1fr;
     box-shadow: 1px 1px 2px;
-    z-index: 0; 
+    z-index: 0;
 }
 
 .first-row {
@@ -111,7 +118,8 @@ input[type="search"] {
     padding-left: 50px;
 }
 
-.user img {
+.user img,
+.trending-avatar {
     height: 70px;
     border-radius: 2rem;
 }
@@ -137,19 +145,73 @@ button {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 20px;
+    padding: 30px;
 }
 
-.project-container{
-    border: 1px solid red;
+.project-container {
     grid-column: 1;
     grid-row: 1/3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.announcements-container{
-    border: 1px solid blue;
+.project-container div {
+    justify-self: center;
 }
 
-.trending-container{
-    border: 1px solid green;
+.announcements-container h2,
+.trending-container h2 {
+    margin-left: 20px;
+}
+
+.announcements,
+.trending,
+.project-container>div {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 1px .5px 3px .5px;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.side-color {
+    height: 100%;
+    width: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: .5rem 0px 0px .5rem;
+    background-color: lightcoral;
+}
+
+.card-content {
+    margin-left: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card-options {
+    align-self: flex-end;
+}
+
+.announcements div {
+    margin: 15px;
+}
+
+.trending div {
+    display: flex;
+    margin: 15px;
+}
+
+.trending-avatar {
+    height: 60px;
+}
+
+.trending-user {
+    display: flex;
+    flex-direction: column;
 }
